@@ -12,21 +12,29 @@
 </head>
 <body>
     <header>
-        header
-    </header>
-    <main>
-        <h1>News Benchmark</h1>
+        
+        <nav>
+            German News Benchmark
+        </nav>
 
-        <section>
+        <h1>Vergleich von deutschen Nachrichten-Homepages</h1>
+        <p class="subtitle"></p>
+
+        <section class="leader">
             <h2>Leader: ${ leader.name }</h2>
 
             <ul>
-                <li>accessibilityScore: ${ leader.accessibilityScore.toFixed(2) }</li>
-                <li>bestpracticesScore: ${ leader.bestpracticesScore.toFixed(2) }</li>
-                <li>performanceScore: ${ leader.performanceScore.toFixed(2) }</li>
-                <li>seoScore: ${ leader.seoScore.toFixed(2) }</li>
+                <li>accessibilityScore: ${ Math.round(leader.accessibilityScore * 100) }%</li>
+                <li>bestpracticesScore: ${ Math.round(leader.bestpracticesScore * 100) }%</li>
+                <li>performanceScore: ${ Math.round(leader.performanceScore * 100) }%</li>
+                <li>seoScore: ${ Math.round(leader.seoScore * 100) }%</li>
             </ul>
         </section>
+
+        <a href="#main" class="button">Kategorien</a>
+
+    </header>
+    <main id="main">
 
         <section>
             <h2>Alle Ergebnisse</h2>
@@ -44,43 +52,43 @@
                 <tbody>
                     <tr>
                         <td>ZEIT</td>
-                        <td>${ zeit.accessibilityScore.toFixed(2) }</td>
-                        <td>${ zeit.bestpracticesScore.toFixed(2) }</td>
-                        <td>${ zeit.performanceScore.toFixed(2) }</td>
-                        <td>${ zeit.seoScore.toFixed(2) }</td>
-                        <td>${ (zeit.overallScore / 4).toFixed(2) }</td>
+                        <td>${ Math.round(zeit.accessibilityScore * 100) }%</td>
+                        <td>${ Math.round(zeit.bestpracticesScore * 100) }%</td>
+                        <td>${ Math.round(zeit.performanceScore * 100) }%</td>
+                        <td>${ Math.round(zeit.seoScore * 100) }%</td>
+                        <td>${ Math.round((zeit.overallScore / 4) * 100) }%</td>
                     </tr>
                     <tr>
                         <td>WELT</td>
-                        <td>${ welt.accessibilityScore.toFixed(2) }</td>
-                        <td>${ welt.bestpracticesScore.toFixed(2) }</td>
-                        <td>${ welt.performanceScore.toFixed(2) }</td>
-                        <td>${ welt.seoScore.toFixed(2) }</td>
-                        <td>${ (welt.overallScore / 4).toFixed(2) }</td>
+                        <td>${ Math.round(welt.accessibilityScore * 100) }%</td>
+                        <td>${ Math.round(welt.bestpracticesScore * 100) }%</td>
+                        <td>${ Math.round(welt.performanceScore * 100) }%</td>
+                        <td>${ Math.round(welt.seoScore * 100) }%</td>
+                        <td>${ Math.round((welt.overallScore / 4) * 100) }%</td>
                     </tr>
                     <tr>
                         <td>SPIEGEL</td>
-                        <td>${ spiegel.accessibilityScore.toFixed(2) }</td>
-                        <td>${ spiegel.bestpracticesScore.toFixed(2) }</td>
-                        <td>${ spiegel.performanceScore.toFixed(2) }</td>
-                        <td>${ spiegel.seoScore.toFixed(2) }</td>
-                        <td>${ (spiegel.overallScore / 4).toFixed(2) }</td>
+                        <td>${ Math.round(spiegel.accessibilityScore * 100) }%</td>
+                        <td>${ Math.round(spiegel.bestpracticesScore * 100) }%</td>
+                        <td>${ Math.round(spiegel.performanceScore * 100) }%</td>
+                        <td>${ Math.round(spiegel.seoScore * 100) }%</td>
+                        <td>${ Math.round((spiegel.overallScore / 4) * 100) }%</td>
                     </tr>
                     <tr>
                         <td>FAZ</td>
-                        <td>${ faz.accessibilityScore.toFixed(2) }</td>
-                        <td>${ faz.bestpracticesScore.toFixed(2) }</td>
-                        <td>${ faz.performanceScore.toFixed(2) }</td>
-                        <td>${ faz.seoScore.toFixed(2) }</td>
-                        <td>${ (faz.overallScore / 4).toFixed(2) }</td>
+                        <td>${ Math.round(faz.accessibilityScore * 100) }%</td>
+                        <td>${ Math.round(faz.bestpracticesScore * 100) }%</td>
+                        <td>${ Math.round(faz.performanceScore * 100) }%</td>
+                        <td>${ Math.round(faz.seoScore * 100) }%</td>
+                        <td>${ Math.round((faz.overallScore / 4) * 100) }%</td>
                     </tr>
                     <tr>
                         <td>Süddeutsche</td>
-                        <td>${ sueddeutsche.accessibilityScore.toFixed(2) }</td>
-                        <td>${ sueddeutsche.bestpracticesScore.toFixed(2) }</td>
-                        <td>${ sueddeutsche.performanceScore.toFixed(2) }</td>
-                        <td>${ sueddeutsche.seoScore.toFixed(2) }</td>
-                        <td>${ (sueddeutsche.overallScore / 4).toFixed(2) }</td>
+                        <td>${ Math.round(sueddeutsche.accessibilityScore * 100) }%</td>
+                        <td>${ Math.round(sueddeutsche.bestpracticesScore * 100) }%</td>
+                        <td>${ Math.round(sueddeutsche.performanceScore * 100) }%</td>
+                        <td>${ Math.round(sueddeutsche.seoScore * 100) }%</td>
+                        <td>${ Math.round((sueddeutsche.overallScore / 4) * 100) }%</td>
                     </tr>
                 </tbody>
             </table>
