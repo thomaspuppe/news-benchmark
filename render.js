@@ -7,6 +7,8 @@ const WHOLE_RESULT_SPIEGEL = JSON.parse(fs.readFileSync('./results/spiegel_lates
 const WHOLE_RESULT_FAZ = JSON.parse(fs.readFileSync('./results/faz_latest.json'), 'utf8');
 const WHOLE_RESULT_SUEDDEUTSCHE = JSON.parse(fs.readFileSync('./results/sueddeutsche_latest.json'), 'utf8');
 
+const FETCH_TIME = WHOLE_RESULT_ZEIT.fetchTime
+
 reduceResults = wholeResult => {
     return {
         accessibilityScore: wholeResult.categories.accessibility.score,
@@ -45,7 +47,13 @@ const templateIndex = fs.readFileSync('./template_index.html', {encoding: 'utf-8
 
 function eval_template(s, params) {
   return Function(...Object.keys(params), "return " + s)
-    (...Object.values(params));
+  (...Object.values(params))
+}
+
+const fetchtime = new Date(FETCH_TIME)
+RESULTS.meta = {
+    fetchtime_date: `${fetchtime.getDate()}.${fetchtime.getMonth()+1}.${fetchtime.getFullYear()}`,
+    fetchtime_time: `${fetchtime.getHours()}:${fetchtime.getMinutes()}`
 }
 
 const htmlIndex = eval_template(templateIndex, RESULTS)
