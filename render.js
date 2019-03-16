@@ -12,7 +12,8 @@ reduceResults = wholeResult => {
         accessibilityScore: wholeResult.categories.accessibility.score,
         bestpracticesScore: wholeResult.categories['best-practices'].score,
         performanceScore: wholeResult.categories.performance.score,
-        seoScore: wholeResult.categories.seo.score
+        seoScore: wholeResult.categories.seo.score,
+        overallScore: wholeResult.categories.accessibility.score + wholeResult.categories['best-practices'].score + wholeResult.categories.performance.score + wholeResult.categories.seo.score
     }
 }
 
@@ -32,18 +33,7 @@ let RESULTS = {
 
 // TODO: this is very naive. Find a better structure and better way.
 findLeader = results => {
-    function sum(obj) {
-        return Object.keys(obj).reduce((sum,key)=>sum+parseFloat(obj[key]||0),0)
-    }
-
-    const scores = {
-        zeit: sum(results.zeit),
-        welt: sum(results.welt),
-        spiegel: sum(results.spiegel),
-        faz: sum(results.faz),
-        sueddeutsche: sum(results.sueddeutsche)
-    }
-    return Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+    return Object.keys(results).reduce((a, b) => results[a]['overallScore'] > results[b]['overallScore'] ? a : b);
 }
 
 const LEADER = findLeader(RESULTS)

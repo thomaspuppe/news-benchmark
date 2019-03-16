@@ -21,10 +21,10 @@
             <h2>Leader: ${ leader.name }</h2>
 
             <ul>
-                <li>accessibilityScore: ${ leader.accessibilityScore }</li>
-                <li>bestpracticesScore: ${ leader.bestpracticesScore }</li>
-                <li>performanceScore: ${ leader.performanceScore }</li>
-                <li>seoScore: ${ leader.seoScore }</li>
+                <li>accessibilityScore: ${ leader.accessibilityScore.toFixed(2) }</li>
+                <li>bestpracticesScore: ${ leader.bestpracticesScore.toFixed(2) }</li>
+                <li>performanceScore: ${ leader.performanceScore.toFixed(2) }</li>
+                <li>seoScore: ${ leader.seoScore.toFixed(2) }</li>
             </ul>
         </section>
 
@@ -38,43 +38,49 @@
                         <td>Best Practice</td>
                         <td>Performance</td>
                         <td>SEO</td>
+                        <td>Durchschnitt</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>ZEIT</td>
-                        <td>${ zeit.accessibilityScore }</td>
-                        <td>${ zeit.bestpracticesScore }</td>
-                        <td>${ zeit.performanceScore }</td>
-                        <td>${ zeit.seoScore }</td>
+                        <td>${ zeit.accessibilityScore.toFixed(2) }</td>
+                        <td>${ zeit.bestpracticesScore.toFixed(2) }</td>
+                        <td>${ zeit.performanceScore.toFixed(2) }</td>
+                        <td>${ zeit.seoScore.toFixed(2) }</td>
+                        <td>${ (zeit.overallScore / 4).toFixed(2) }</td>
                     </tr>
                     <tr>
                         <td>WELT</td>
-                        <td>${ welt.accessibilityScore }</td>
-                        <td>${ welt.bestpracticesScore }</td>
-                        <td>${ welt.performanceScore }</td>
-                        <td>${ welt.seoScore }</td>
+                        <td>${ welt.accessibilityScore.toFixed(2) }</td>
+                        <td>${ welt.bestpracticesScore.toFixed(2) }</td>
+                        <td>${ welt.performanceScore.toFixed(2) }</td>
+                        <td>${ welt.seoScore.toFixed(2) }</td>
+                        <td>${ (welt.overallScore / 4).toFixed(2) }</td>
                     </tr>
                     <tr>
                         <td>SPIEGEL</td>
-                        <td>${ spiegel.accessibilityScore }</td>
-                        <td>${ spiegel.bestpracticesScore }</td>
-                        <td>${ spiegel.performanceScore }</td>
-                        <td>${ spiegel.seoScore }</td>
+                        <td>${ spiegel.accessibilityScore.toFixed(2) }</td>
+                        <td>${ spiegel.bestpracticesScore.toFixed(2) }</td>
+                        <td>${ spiegel.performanceScore.toFixed(2) }</td>
+                        <td>${ spiegel.seoScore.toFixed(2) }</td>
+                        <td>${ (spiegel.overallScore / 4).toFixed(2) }</td>
                     </tr>
                     <tr>
                         <td>FAZ</td>
-                        <td>${ faz.accessibilityScore }</td>
-                        <td>${ faz.bestpracticesScore }</td>
-                        <td>${ faz.performanceScore }</td>
-                        <td>${ faz.seoScore }</td>
+                        <td>${ faz.accessibilityScore.toFixed(2) }</td>
+                        <td>${ faz.bestpracticesScore.toFixed(2) }</td>
+                        <td>${ faz.performanceScore.toFixed(2) }</td>
+                        <td>${ faz.seoScore.toFixed(2) }</td>
+                        <td>${ (faz.overallScore / 4).toFixed(2) }</td>
                     </tr>
                     <tr>
                         <td>Süddeutsche</td>
-                        <td>${ sueddeutsche.accessibilityScore }</td>
-                        <td>${ sueddeutsche.bestpracticesScore }</td>
-                        <td>${ sueddeutsche.performanceScore }</td>
-                        <td>${ sueddeutsche.seoScore }</td>
+                        <td>${ sueddeutsche.accessibilityScore.toFixed(2) }</td>
+                        <td>${ sueddeutsche.bestpracticesScore.toFixed(2) }</td>
+                        <td>${ sueddeutsche.performanceScore.toFixed(2) }</td>
+                        <td>${ sueddeutsche.seoScore.toFixed(2) }</td>
+                        <td>${ (sueddeutsche.overallScore / 4).toFixed(2) }</td>
                     </tr>
                 </tbody>
             </table>
