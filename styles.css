@@ -11,6 +11,10 @@ body {
 	letter-spacing: 0.03em;
 }
 
+h1, h2, h3 {
+	text-align: center;
+}
+
 h1 {
 	font-size: 74px;
     font-weight: 700;
