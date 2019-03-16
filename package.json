@@ -1,0 +1,21 @@
+{
+  "name": "easto",
+  "version": "0.1.0",
+  "author": "Thomas Puppe <info@thomaspuppe.de>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:thomaspuppe/news-benchmark.git"
+  },
+  "scripts": {
+    "collect_zeit": "./node_modules/lighthouse/lighthouse-cli/index.js https://www.zeit.de/index --output=json --output-path=./results/zeit_latest.json --chrome-flags=\"--headless\"",
+    "collect_welt": "./node_modules/lighthouse/lighthouse-cli/index.js https://www.welt.de --output=json --output-path=./results/welt_latest.json --chrome-flags=\"--headless\"",
+    "collect_spiegel": "./node_modules/lighthouse/lighthouse-cli/index.js https://www.spiegel.de --output=json --output-path=./results/spiegel_latest.json --chrome-flags=\"--headless\"",
+    "collect_faz": "./node_modules/lighthouse/lighthouse-cli/index.js https://www.faz.net --output=json --output-path=./results/faz_latest.json --chrome-flags=\"--headless\"",
+    "collect_sueddeutsche": "./node_modules/lighthouse/lighthouse-cli/index.js https://www.sueddeutsche.de/ --output=json --output-path=./results/sueddeutsche_latest.json --chrome-flags=\"--headless\"",
+    "collect": "npm run collect_zeit; npm run collect_welt; npm run collect_spiegel; npm run collect_faz; npm run collect_sueddeutsche;"
+  },
+  "dependencies": {
+    "lighthouse": "^4.2.0"
+  }
+}

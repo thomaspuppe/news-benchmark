@@ -1,0 +1,87 @@
+`<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="language" content="de">
+    <title>News Benchmark</title>
+    <meta name="description" content="">
+    <meta name="date" content="2019-03-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css"/>
+    <meta name="author" content="Thomas Puppe" />
+</head>
+<body>
+    <header>
+        header
+    </header>
+    <main>
+        <h1>News Benchmark</h1>
+
+        <section>
+            <h2>Leader: ${ leader.name }</h2>
+
+            <ul>
+                <li>accessibilityScore: ${ leader.accessibilityScore }</li>
+                <li>bestpracticesScore: ${ leader.bestpracticesScore }</li>
+                <li>performanceScore: ${ leader.performanceScore }</li>
+                <li>seoScore: ${ leader.seoScore }</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Alle Ergebnisse</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Seite</td>
+                        <td>Accessibility</td>
+                        <td>Best Practice</td>
+                        <td>Performance</td>
+                        <td>SEO</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ZEIT</td>
+                        <td>${ zeit.accessibilityScore }</td>
+                        <td>${ zeit.bestpracticesScore }</td>
+                        <td>${ zeit.performanceScore }</td>
+                        <td>${ zeit.seoScore }</td>
+                    </tr>
+                    <tr>
+                        <td>WELT</td>
+                        <td>${ welt.accessibilityScore }</td>
+                        <td>${ welt.bestpracticesScore }</td>
+                        <td>${ welt.performanceScore }</td>
+                        <td>${ welt.seoScore }</td>
+                    </tr>
+                    <tr>
+                        <td>SPIEGEL</td>
+                        <td>${ spiegel.accessibilityScore }</td>
+                        <td>${ spiegel.bestpracticesScore }</td>
+                        <td>${ spiegel.performanceScore }</td>
+                        <td>${ spiegel.seoScore }</td>
+                    </tr>
+                    <tr>
+                        <td>FAZ</td>
+                        <td>${ faz.accessibilityScore }</td>
+                        <td>${ faz.bestpracticesScore }</td>
+                        <td>${ faz.performanceScore }</td>
+                        <td>${ faz.seoScore }</td>
+                    </tr>
+                    <tr>
+                        <td>Süddeutsche</td>
+                        <td>${ sueddeutsche.accessibilityScore }</td>
+                        <td>${ sueddeutsche.bestpracticesScore }</td>
+                        <td>${ sueddeutsche.performanceScore }</td>
+                        <td>${ sueddeutsche.seoScore }</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        footer
+    </footer>
+</body>
+</html>`
