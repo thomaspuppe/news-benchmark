@@ -1,5 +1,5 @@
 {
-  "name": "easto",
+  "name": "News Benchmark",
   "version": "0.1.0",
   "author": "Thomas Puppe <info@thomaspuppe.de>",
   "license": "MIT",
@@ -13,7 +13,9 @@
     "collect_spiegel": "./node_modules/lighthouse/lighthouse-cli/index.js https://www.spiegel.de --output=json --output-path=./results/spiegel_latest.json --chrome-flags=\"--headless\"",
     "collect_faz": "./node_modules/lighthouse/lighthouse-cli/index.js https://www.faz.net --output=json --output-path=./results/faz_latest.json --chrome-flags=\"--headless\"",
     "collect_sueddeutsche": "./node_modules/lighthouse/lighthouse-cli/index.js https://www.sueddeutsche.de/ --output=json --output-path=./results/sueddeutsche_latest.json --chrome-flags=\"--headless\"",
-    "collect": "npm run collect_zeit; npm run collect_welt; npm run collect_spiegel; npm run collect_faz; npm run collect_sueddeutsche;"
+    "collect": "npm run collect_zeit; npm run collect_welt; npm run collect_spiegel; npm run collect_faz; npm run collect_sueddeutsche;",
+    "render": "node render.js",
+    "deploy": "git subtree push --prefix output origin gh-pages"
   },
   "dependencies": {
     "lighthouse": "^4.2.0"
