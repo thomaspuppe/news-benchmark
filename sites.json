@@ -18,12 +18,6 @@
 		"label_pretty": "Der SPIEGEL"
 	},
 	{
-		"id": "faz",
-		"url": "https://www.faz.net",
-		"label": "FAZ",
-		"label_pretty": "FAZ.net"
-	},
-	{
 		"id": "sueddeutsche",
 		"url": "https://www.sueddeutsche.de",
 		"label": "Süddeutsche",
