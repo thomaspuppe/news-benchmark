@@ -1,6 +1,8 @@
 console.time('📊')
 const fs = require('fs')
 
+const lighthouseReportGenerator = require('./node_modules/lighthouse/lighthouse-core/report/report-generator');
+
 const WHOLE_RESULT_ZEIT = JSON.parse(fs.readFileSync('./results/zeit_latest.json'), 'utf8');
 const WHOLE_RESULT_WELT = JSON.parse(fs.readFileSync('./results/welt_latest.json'), 'utf8');
 const WHOLE_RESULT_SPIEGEL = JSON.parse(fs.readFileSync('./results/spiegel_latest.json'), 'utf8');
@@ -8,6 +10,17 @@ const WHOLE_RESULT_FAZ = JSON.parse(fs.readFileSync('./results/faz_latest.json')
 const WHOLE_RESULT_SUEDDEUTSCHE = JSON.parse(fs.readFileSync('./results/sueddeutsche_latest.json'), 'utf8');
 
 const FETCH_TIME = WHOLE_RESULT_ZEIT.fetchTime
+
+generateHtmlReportFromResult = (resultJSON, name) => {
+    const resultHtml = lighthouseReportGenerator.generateReportHtml(resultJSON);
+    fs.writeFileSync(`./output/report_${name}.html`, resultHtml)
+}
+
+generateHtmlReportFromResult(WHOLE_RESULT_ZEIT, 'zeit')
+generateHtmlReportFromResult(WHOLE_RESULT_WELT, 'welt')
+generateHtmlReportFromResult(WHOLE_RESULT_SPIEGEL, 'spiegel')
+generateHtmlReportFromResult(WHOLE_RESULT_FAZ, 'faz')
+generateHtmlReportFromResult(WHOLE_RESULT_SUEDDEUTSCHE, 'sueddeutsche')
 
 reduceResults = wholeResult => {
     return {
