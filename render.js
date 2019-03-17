@@ -26,7 +26,7 @@ findLeader = sites => {
 
 eval_template = (s, params) => {
   return Function(...Object.keys(params), "return " + s)
-  (...Object.values(params)) // TOTO: remove??
+  (...Object.values(params))
 }
 
 SITES.forEach( SITE => {
