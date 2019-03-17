@@ -1,0 +1,32 @@
+[
+	{
+		"id": "zeit",
+		"url": "https://www.zeit.de/index",
+		"label": "ZEIT",
+		"label_pretty": "ZEIT Online"
+	},
+	{
+		"id": "welt",
+		"url": "https://www.welt.de",
+		"label": "WELT",
+		"label_pretty": "Die WELT"
+	},
+	{
+		"id": "spiegel",
+		"url": "https://www.spiegel.de",
+		"label": "SPIEGEL",
+		"label_pretty": "Der SPIEGEL"
+	},
+	{
+		"id": "faz",
+		"url": "https://www.faz.net",
+		"label": "FAZ",
+		"label_pretty": "FAZ.net"
+	},
+	{
+		"id": "sueddeutsche",
+		"url": "https://www.sueddeutsche.de",
+		"label": "Süddeutsche",
+		"label_pretty": "Süddeutsche Zeitung"
+	}
+]

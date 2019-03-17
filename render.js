@@ -1,28 +1,15 @@
 console.time('📊')
 const fs = require('fs')
-
 const lighthouseReportGenerator = require('./node_modules/lighthouse/lighthouse-core/report/report-generator');
 
-const WHOLE_RESULT_ZEIT = JSON.parse(fs.readFileSync('./results/zeit_latest.json'), 'utf8');
-const WHOLE_RESULT_WELT = JSON.parse(fs.readFileSync('./results/welt_latest.json'), 'utf8');
-const WHOLE_RESULT_SPIEGEL = JSON.parse(fs.readFileSync('./results/spiegel_latest.json'), 'utf8');
-const WHOLE_RESULT_FAZ = JSON.parse(fs.readFileSync('./results/faz_latest.json'), 'utf8');
-const WHOLE_RESULT_SUEDDEUTSCHE = JSON.parse(fs.readFileSync('./results/sueddeutsche_latest.json'), 'utf8');
+const SITES = JSON.parse(fs.readFileSync('./sites.json'), 'utf8')
 
-const FETCH_TIME = WHOLE_RESULT_ZEIT.fetchTime
-
-generateHtmlReportFromResult = (resultJSON, name) => {
+generateHtmlReportFromLighthouseResult = (resultJSON, name) => {
     const resultHtml = lighthouseReportGenerator.generateReportHtml(resultJSON);
     fs.writeFileSync(`./output/report_${name}.html`, resultHtml)
 }
 
-generateHtmlReportFromResult(WHOLE_RESULT_ZEIT, 'zeit')
-generateHtmlReportFromResult(WHOLE_RESULT_WELT, 'welt')
-generateHtmlReportFromResult(WHOLE_RESULT_SPIEGEL, 'spiegel')
-generateHtmlReportFromResult(WHOLE_RESULT_FAZ, 'faz')
-generateHtmlReportFromResult(WHOLE_RESULT_SUEDDEUTSCHE, 'sueddeutsche')
-
-reduceResults = wholeResult => {
+reduceLighthouseResult = wholeResult => {
     return {
         accessibilityScore: wholeResult.categories.accessibility.score,
         bestpracticesScore: wholeResult.categories['best-practices'].score,
@@ -32,44 +19,42 @@ reduceResults = wholeResult => {
     }
 }
 
-const RESULT_ZEIT = reduceResults(WHOLE_RESULT_ZEIT)
-const RESULT_WELT = reduceResults(WHOLE_RESULT_WELT)
-const RESULT_SPIEGEL = reduceResults(WHOLE_RESULT_SPIEGEL)
-const RESULT_FAZ = reduceResults(WHOLE_RESULT_FAZ)
-const RESULT_SUEDDEUTSCHE = reduceResults(WHOLE_RESULT_SUEDDEUTSCHE)
-
-let RESULTS = {
-    zeit: RESULT_ZEIT,
-    welt: RESULT_WELT,
-    spiegel: RESULT_SPIEGEL,
-    faz: RESULT_FAZ,
-    sueddeutsche: RESULT_SUEDDEUTSCHE
+// returns the index
+findLeader = sites => {
+    return Object.keys(sites).reduce((a, b) => sites[a]['result']['overallScore'] > sites[b]['result']['overallScore'] ? a : b);
 }
 
-// TODO: this is very naive. Find a better structure and better way.
-findLeader = results => {
-    return Object.keys(results).reduce((a, b) => results[a]['overallScore'] > results[b]['overallScore'] ? a : b);
-}
-
-const LEADER = findLeader(RESULTS)
-
-RESULTS.leader = RESULTS[LEADER]
-RESULTS.leader.name = LEADER
-
-const templateIndex = fs.readFileSync('./template_index.html', {encoding: 'utf-8'})
-
-function eval_template(s, params) {
+eval_template = (s, params) => {
   return Function(...Object.keys(params), "return " + s)
-  (...Object.values(params))
+  (...Object.values(params)) // TOTO: remove??
 }
 
+SITES.forEach( SITE => {
+    // OPTIMIZE: async all the fs read and write operations
+    SITE.lighthouseResult = JSON.parse(fs.readFileSync(`./results/${SITE.id}_latest.json`), 'utf8');
+    SITE.result = reduceLighthouseResult(SITE.lighthouseResult)
+
+    generateHtmlReportFromLighthouseResult(SITE.lighthouseResult, SITE.id)
+})
+
+const LEADER = SITES[findLeader(SITES)]
+
+const TEMPLATE_INDEX = fs.readFileSync('./template_index.html', {encoding: 'utf-8'})
+
+const FETCH_TIME = SITES[0].lighthouseResult.fetchTime
 const fetchtime = new Date(FETCH_TIME)
-RESULTS.meta = {
+const RESULTS_META = {
     fetchtime_date: `${fetchtime.getDate()}.${fetchtime.getMonth()+1}.${fetchtime.getFullYear()}`,
     fetchtime_time: `${fetchtime.getHours()}:${fetchtime.getMinutes()}`
 }
 
-const htmlIndex = eval_template(templateIndex, RESULTS)
+const RENDER_OBJECT = {
+    sites: SITES,
+    leader: LEADER,
+    meta: RESULTS_META
+}
+
+const htmlIndex = eval_template(TEMPLATE_INDEX, RENDER_OBJECT)
 
 fs.writeFileSync('./output/index.html', htmlIndex)
 

@@ -20,13 +20,13 @@
 
         <div class="container">
             <span class="kicker">Bestes Ergebnis:</span>
-            <h2 class="u-emojiframe--tada">${ leader.name }</h2>
+            <h2 class="u-emojiframe--tada">${ leader.label_pretty }</h2>
 
             <ul>
-                <li>accessibilityScore: ${ Math.round(leader.accessibilityScore * 100) }%</li>
-                <li>bestpracticesScore: ${ Math.round(leader.bestpracticesScore * 100) }%</li>
-                <li>performanceScore: ${ Math.round(leader.performanceScore * 100) }%</li>
-                <li>seoScore: ${ Math.round(leader.seoScore * 100) }%</li>
+                <li>accessibilityScore: ${ Math.round(leader.result.accessibilityScore * 100) }%</li>
+                <li>bestpracticesScore: ${ Math.round(leader.result.bestpracticesScore * 100) }%</li>
+                <li>performanceScore: ${ Math.round(leader.result.performanceScore * 100) }%</li>
+                <li>seoScore: ${ Math.round(leader.result.seoScore * 100) }%</li>
             </ul>
         </div>
 
@@ -37,7 +37,7 @@
     </header>
     <main id="main">
 
-        <section class="categories">
+ <section class="categories">
         <div class="container">
             <h2 id="categories">Alle Ergebnisse</h2>
             <p>Der Test wurde durchgeführt am ${meta.fetchtime_date} um ${meta.fetchtime_time} Uhr.</p>
@@ -53,46 +53,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>ZEIT</td>
-                        <td>${ Math.round(zeit.accessibilityScore * 100) }%</td>
-                        <td>${ Math.round(zeit.bestpracticesScore * 100) }%</td>
-                        <td>${ Math.round(zeit.performanceScore * 100) }%</td>
-                        <td>${ Math.round(zeit.seoScore * 100) }%</td>
-                        <td>${ Math.round((zeit.overallScore / 4) * 100) }% <a href="report_zeit.html">Details</a></td>
-                    </tr>
-                    <tr>
-                        <td>WELT</td>
-                        <td>${ Math.round(welt.accessibilityScore * 100) }%</td>
-                        <td>${ Math.round(welt.bestpracticesScore * 100) }%</td>
-                        <td>${ Math.round(welt.performanceScore * 100) }%</td>
-                        <td>${ Math.round(welt.seoScore * 100) }%</td>
-                        <td>${ Math.round((welt.overallScore / 4) * 100) }% <a href="report_welt.html">Details</a></td>
-                    </tr>
-                    <tr>
-                        <td>SPIEGEL</td>
-                        <td>${ Math.round(spiegel.accessibilityScore * 100) }%</td>
-                        <td>${ Math.round(spiegel.bestpracticesScore * 100) }%</td>
-                        <td>${ Math.round(spiegel.performanceScore * 100) }%</td>
-                        <td>${ Math.round(spiegel.seoScore * 100) }%</td>
-                        <td>${ Math.round((spiegel.overallScore / 4) * 100) }% <a href="report_spiegel.html">Details</a></td>
-                    </tr>
-                    <tr>
-                        <td>FAZ</td>
-                        <td>${ Math.round(faz.accessibilityScore * 100) }%</td>
-                        <td>${ Math.round(faz.bestpracticesScore * 100) }%</td>
-                        <td>${ Math.round(faz.performanceScore * 100) }%</td>
-                        <td>${ Math.round(faz.seoScore * 100) }%</td>
-                        <td>${ Math.round((faz.overallScore / 4) * 100) }% <a href="report_faz.html">Details</a></td>
-                    </tr>
-                    <tr>
-                        <td>Süddeutsche</td>
-                        <td>${ Math.round(sueddeutsche.accessibilityScore * 100) }%</td>
-                        <td>${ Math.round(sueddeutsche.bestpracticesScore * 100) }%</td>
-                        <td>${ Math.round(sueddeutsche.performanceScore * 100) }%</td>
-                        <td>${ Math.round(sueddeutsche.seoScore * 100) }%</td>
-                        <td>${ Math.round((sueddeutsche.overallScore / 4) * 100) }% <a href="report_sueddeutsche.html">Details</a></td>
-                    </tr>
+                    ${sites.map((site, index) =>
+                        `<tr>
+                            <td>${site.label}</td>
+                            <td>${ Math.round(site.result.accessibilityScore * 100) }%</td>
+                            <td>${ Math.round(site.result.bestpracticesScore * 100) }%</td>
+                            <td>${ Math.round(site.result.performanceScore * 100) }%</td>
+                            <td>${ Math.round(site.result.seoScore * 100) }%</td>
+                            <td>${ Math.round((site.result.overallScore / 4) * 100) }% <a href="report_${site_id}.html">Details</a></td>
+                        </tr>`
+                    ).join('\n')}
                 </tbody>
             </table>
         </div>
@@ -106,7 +76,7 @@
                 <p><strong>Disclaimer:</strong> Der Autor dieses Projekts ist Mitarbeiter von ZEIT Online.</p>
         
                 <h3 id="seiten">Welche Seiten werden getestet?</h3>
-                <p>In der ersten Version nur fünf: ZEIT Online, WELT, Spiegel, FAZ und die Süddeutsche Zeitung.</p>
+                <p>In der ersten Version nur ${sites.length}: ${sites.map((site, index) =>`${site.label_pretty}`).join(', ')}.</p>
 
                 <h3 id="methodik">Wie wird getestet?</h3>
                 <p>Fürs Erste wird das Tool <a href="https://github.com/GoogleChrome/lighthouse">Lighthouse</a> von Google Chrome genutzt. Es testet Websites und erstellt Scores für die Themen Accessibility, Performance, Best Practices und SEO. Aus diesen Scores wird das Ranking erstellt.</p>
