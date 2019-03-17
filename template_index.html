@@ -60,7 +60,7 @@
                             <td>${ Math.round(site.result.bestpracticesScore * 100) }%</td>
                             <td>${ Math.round(site.result.performanceScore * 100) }%</td>
                             <td>${ Math.round(site.result.seoScore * 100) }%</td>
-                            <td>${ Math.round((site.result.overallScore / 4) * 100) }% <a href="report_${site_id}.html">Details</a></td>
+                            <td>${ Math.round((site.result.overallScore / 4) * 100) }% <a href="report_${site.id}.html">Details</a></td>
                         </tr>`
                     ).join('\n')}
                 </tbody>
