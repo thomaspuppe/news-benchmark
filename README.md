@@ -35,4 +35,4 @@ https://thomaspuppe.github.io/news-benchmark/
 	}
 ```
 
-* small ranking boards for each category (a11y, best-practice, perf, seo)
+* small ranking boards for each category (a11y, best-practice, perf, seo), or a sortable table
