@@ -76,7 +76,7 @@
                 <p><strong>Disclaimer:</strong> Der Autor dieses Projekts ist Mitarbeiter von ZEIT Online.</p>
         
                 <h3 id="seiten">Welche Seiten werden getestet?</h3>
-                <p>In der ersten Version nur ${sites.length}: ${sites.map((site, index) =>`${site.label_pretty}`).join(', ')}.</p>
+                <p>Aktuell ${sites.length} der <a href="https://de.statista.com/statistik/daten/studie/165258/umfrage/reichweite-der-meistbesuchten-nachrichtenwebsites/">reichweitenstärksten Online-Nachrichtenportale Deutschlands</a>: ${sites.map((site, index) =>`${site.label_pretty}`).join(', ')}.</p>
 
                 <h3 id="methodik">Wie wird getestet?</h3>
                 <p>Fürs Erste wird das Tool <a href="https://github.com/GoogleChrome/lighthouse">Lighthouse</a> von Google Chrome genutzt. Es testet Websites und erstellt Scores für die Themen Accessibility, Performance, Best Practices und SEO. Aus diesen Scores wird das Ranking erstellt.</p>
