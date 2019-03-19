@@ -58,5 +58,17 @@
 		"url": "https://www.stern.de/",
 		"label": "STERN",
 		"label_pretty": "STERN"
+	},
+	{
+		"id": "faz",
+		"url": "https://www.faz.net/aktuell/",
+		"label": "FAZ",
+		"label_pretty": "FAZ"
+	},
+	{
+		"id": "heise",
+		"url": "https://www.heise.de/",
+		"label": "heise",
+		"label_pretty": "heise"
 	}
 ]
