@@ -23,10 +23,10 @@
             <h2 class="u-emojiframe--tada">${ leader.label_pretty }</h2>
 
             <ul>
-                <li>accessibilityScore: ${ Math.round(leader.result.accessibilityScore * 100) }%</li>
-                <li>bestpracticesScore: ${ Math.round(leader.result.bestpracticesScore * 100) }%</li>
-                <li>performanceScore: ${ Math.round(leader.result.performanceScore * 100) }%</li>
-                <li>seoScore: ${ Math.round(leader.result.seoScore * 100) }%</li>
+                <li>accessibilityScore: ${ percentage(leader.result.accessibilityScore) }</li>
+                <li>bestpracticesScore: ${ percentage(leader.result.bestpracticesScore) }</li>
+                <li>performanceScore: ${ percentage(leader.result.performanceScore) }</li>
+                <li>seoScore: ${ percentage(leader.result.seoScore) }</li>
             </ul>
         </div>
 
@@ -45,7 +45,7 @@
                 <h3>Gesamt</h3>
                 <ol>
                 ${rankingPerScore.overallRanking.map((site, index) =>
-                    `<li><span class="label">${site.label}</span><span class="value">${ Math.round(site.value * 100) }%</span></li>`
+                    `<li><span class="label">${site.label}</span><span class="value">${ ((site.value / 4) * 100).toFixed(1) }%</span></li>`
                 ).join('\n')}
                 </ol>
             </div>
@@ -54,7 +54,7 @@
                 <h3>Accessibility</h3>
                 <ol>
                 ${rankingPerScore.accessibilityRanking.map((site, index) =>
-                    `<li><span class="label">${site.label}</span><span class="value">${ Math.round(site.value * 100) }%</span></li>`
+                    `<li><span class="label">${site.label}</span><span class="value">${ percentage(site.value) }</span></li>`
                 ).join('\n')}
                 </ol>
             </div>
@@ -63,7 +63,7 @@
                 <h3>Best Practices</h3>
                 <ol>
                 ${rankingPerScore.bestpracticesRanking.map((site, index) =>
-                    `<li><span class="label">${site.label}</span><span class="value">${ Math.round(site.value * 100) }%</span></li>`
+                    `<li><span class="label">${site.label}</span><span class="value">${ percentage(site.value) }</span></li>`
                 ).join('\n')}
                 </ol>
             </div>
@@ -72,7 +72,7 @@
                 <h3>Performance</h3>
                 <ol>
                 ${rankingPerScore.performanceRanking.map((site, index) =>
-                    `<li><span class="label">${site.label}</span><span class="value">${ Math.round(site.value * 100) }%</span></li>`
+                    `<li><span class="label">${site.label}</span><span class="value">${ percentage(site.value) }</span></li>`
                 ).join('\n')}
                 </ol>
             </div>
@@ -81,7 +81,7 @@
                 <h3>SEO</h3>
                 <ol>
                 ${rankingPerScore.seoRanking.map((site, index) =>
-                    `<li><span class="label">${site.label}</span><span class="value">${ Math.round(site.value * 100) }%</span></li>`
+                    `<li><span class="label">${site.label}</span><span class="value">${ percentage(site.value) }</span></li>`
                 ).join('\n')}
                 </ol>
             </div>
@@ -105,10 +105,10 @@
                     ${sites.map((site, index) =>
                         `<tr>
                             <td>${site.label}</td>
-                            <td>${ Math.round(site.result.accessibilityScore * 100) }%</td>
-                            <td>${ Math.round(site.result.bestpracticesScore * 100) }%</td>
-                            <td>${ Math.round(site.result.performanceScore * 100) }%</td>
-                            <td>${ Math.round(site.result.seoScore * 100) }%</td>
+                            <td>${ percentage(site.result.accessibilityScore) }</td>
+                            <td>${ percentage(site.result.bestpracticesScore) }</td>
+                            <td>${ percentage(site.result.performanceScore) }</td>
+                            <td>${ percentage(site.result.seoScore) }</td>
                             <td>${ ((site.result.overallScore / 4) * 100).toFixed(1) }% <a href="report_${site.id}.html"><small>Details</small></a></td>
                         </tr>`
                     ).join('\n')}

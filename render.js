@@ -19,6 +19,10 @@ reduceLighthouseResult = wholeResult => {
     }
 }
 
+percentage = value => {
+    return Math.round(value * 100) + '%'
+}
+
 // returns the index
 findLeader = sites => {
     return Object.keys(sites).reduce((a, b) => sites[a]['result']['overallScore'] > sites[b]['result']['overallScore'] ? a : b);
