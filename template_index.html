@@ -39,6 +39,55 @@
 
  <section class="categories">
         <div class="container">
+            <h2 id="ranking">Ranking pro Kategorie</h2>
+
+            <div class="column">
+                <h3>Gesamt</h3>
+                <ol>
+                ${rankingPerScore.overallRanking.map((site, index) =>
+                    `<li><span class="label">${site.label}</span><span class="value">${ Math.round(site.value * 100) }%</span></li>`
+                ).join('\n')}
+                </ol>
+            </div>
+
+            <div class="column">
+                <h3>Accessibility</h3>
+                <ol>
+                ${rankingPerScore.accessibilityRanking.map((site, index) =>
+                    `<li><span class="label">${site.label}</span><span class="value">${ Math.round(site.value * 100) }%</span></li>`
+                ).join('\n')}
+                </ol>
+            </div>
+
+            <div class="column">
+                <h3>Best Practices</h3>
+                <ol>
+                ${rankingPerScore.bestpracticesRanking.map((site, index) =>
+                    `<li><span class="label">${site.label}</span><span class="value">${ Math.round(site.value * 100) }%</span></li>`
+                ).join('\n')}
+                </ol>
+            </div>
+
+            <div class="column">
+                <h3>Performance</h3>
+                <ol>
+                ${rankingPerScore.performanceRanking.map((site, index) =>
+                    `<li><span class="label">${site.label}</span><span class="value">${ Math.round(site.value * 100) }%</span></li>`
+                ).join('\n')}
+                </ol>
+            </div>
+
+            <div class="column">
+                <h3>SEO</h3>
+                <ol>
+                ${rankingPerScore.seoRanking.map((site, index) =>
+                    `<li><span class="label">${site.label}</span><span class="value">${ Math.round(site.value * 100) }%</span></li>`
+                ).join('\n')}
+                </ol>
+            </div>
+
+        </div>
+        <div class="container">
             <h2 id="categories">Alle Ergebnisse</h2>
             <p>Der Test wurde durchgeführt am ${meta.fetchtime_date} um ${meta.fetchtime_time} Uhr.</p>
             <table>

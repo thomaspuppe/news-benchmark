@@ -24,6 +24,24 @@ findLeader = sites => {
     return Object.keys(sites).reduce((a, b) => sites[a]['result']['overallScore'] > sites[b]['result']['overallScore'] ? a : b);
 }
 
+extractScoreSorted = score => {
+    let scores = []
+    SITES.forEach( SITE => {
+        scores.push( {'label': SITE.label, 'value': SITE['result'][score]} )
+    })
+    return scores.sort((a, b) => b.value - a.value);
+}
+
+getRankingPerScore = () => {
+    return {
+        accessibilityRanking: extractScoreSorted('accessibilityScore'),
+        bestpracticesRanking: extractScoreSorted('bestpracticesScore'), 
+        performanceRanking: extractScoreSorted('performanceScore'),
+        seoRanking: extractScoreSorted('seoScore'),
+        overallRanking: extractScoreSorted('overallScore')
+    }
+}
+
 eval_template = (s, params) => {
   return Function(...Object.keys(params), "return " + s)
   (...Object.values(params))
@@ -51,7 +69,8 @@ const RESULTS_META = {
 const RENDER_OBJECT = {
     sites: SITES,
     leader: LEADER,
-    meta: RESULTS_META
+    meta: RESULTS_META,
+    rankingPerScore: getRankingPerScore()
 }
 
 const htmlIndex = eval_template(TEMPLATE_INDEX, RENDER_OBJECT)
