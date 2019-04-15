@@ -97,3 +97,37 @@ footer {
 	content: "  🎉";
 	font-size: 0.7em;
 }
+
+.column-container {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 1em auto;
+	max-width: 100%;
+}
+.column {
+	background-color: pink;
+	margin: 0 1em;
+	padding: 0 1em;
+}
+
+/* TODO: why the fuck do the ol numbers disappear with flexbox? */
+.column ol {
+	counter-reset: my-badass-counter;
+	padding-left: 0;
+}
+
+.column ol li {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column ol li:before {
+	content: counter(my-badass-counter, decimal-leading-zero);
+	counter-increment: my-badass-counter;
+	font-variant-numeric: tabular-nums;
+	text-align: right;
+	padding-right: 0.5ch;
+}
+.column ol li span:first-child {
+	padding-right: 2ch;
+}
