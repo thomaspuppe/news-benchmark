@@ -13,6 +13,6 @@
     "deploy": "git subtree push --prefix output origin gh-pages"
   },
   "dependencies": {
-    "lighthouse": "^4.2.0"
+    "lighthouse": "^4.3.1"
   }
 }
