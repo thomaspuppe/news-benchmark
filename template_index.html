@@ -26,6 +26,7 @@
                 <li>accessibilityScore: ${ percentage(leader.result.accessibilityScore) }</li>
                 <li>bestpracticesScore: ${ percentage(leader.result.bestpracticesScore) }</li>
                 <li>performanceScore: ${ percentage(leader.result.performanceScore) }</li>
+                <li>fieldPerformanceScore: ${ percentage(leader.result.fieldPerformanceScore) }</li>
                 <li>seoScore: ${ percentage(leader.result.seoScore) }</li>
             </ul>
         </div>
@@ -97,6 +98,7 @@
                         <td>Accessibility</td>
                         <td>Best Practice</td>
                         <td>Performance</td>
+                        <td>reale Performance</td>
                         <td>SEO</td>
                         <td>Durchschnitt</td>
                     </tr>
@@ -108,6 +110,7 @@
                             <td>${ percentage(site.result.accessibilityScore) }</td>
                             <td>${ percentage(site.result.bestpracticesScore) }</td>
                             <td>${ percentage(site.result.performanceScore) }</td>
+                            <td>${ percentage(site.result.fieldPerformanceScore) }</td>
                             <td>${ percentage(site.result.seoScore) }</td>
                             <td>${ ((site.result.overallScore / 4) * 100).toFixed(1) }% <a href="report_${site.id}.html"><small>Details</small></a></td>
                         </tr>`

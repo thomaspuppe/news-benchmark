@@ -14,8 +14,9 @@ reduceLighthouseResult = wholeResult => {
         accessibilityScore: wholeResult.categories.accessibility.score,
         bestpracticesScore: wholeResult.categories['best-practices'].score,
         performanceScore: wholeResult.categories.performance.score,
+        fieldPerformanceScore: wholeResult.categories['lighthouse-plugin-field-performance'].score,
         seoScore: wholeResult.categories.seo.score,
-        overallScore: wholeResult.categories.accessibility.score + wholeResult.categories['best-practices'].score + wholeResult.categories.performance.score + wholeResult.categories.seo.score
+        overallScore: wholeResult.categories.accessibility.score + wholeResult.categories['best-practices'].score + wholeResult.categories.performance.score + wholeResult.categories['lighthouse-plugin-field-performance'].score + wholeResult.categories.seo.score
     }
 }
 
@@ -41,6 +42,7 @@ getRankingPerScore = () => {
         accessibilityRanking: extractScoreSorted('accessibilityScore'),
         bestpracticesRanking: extractScoreSorted('bestpracticesScore'), 
         performanceRanking: extractScoreSorted('performanceScore'),
+        fieldPerformanceRanking: extractScoreSorted('fieldPerformanceScore'),
         seoRanking: extractScoreSorted('seoScore'),
         overallRanking: extractScoreSorted('overallScore')
     }

@@ -773,6 +773,14 @@ lighthouse-logger@^1.0.0, lighthouse-logger@^1.2.0:
     debug "^2.6.8"
     marky "^1.2.0"
 
+lighthouse-plugin-field-performance@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/lighthouse-plugin-field-performance/-/lighthouse-plugin-field-performance-1.0.2.tgz#28b1dc360f0946d14b721cb4bd718d741f938e8e"
+  integrity sha512-RfkiEG/XVaFQSmGRJNPuLW9wfCnpxN4ukfk4vcMdg/WhEYsmCKRfS0Jl/IhnIFO61KKieIKTce+DBDVhuNHnvw==
+  dependencies:
+    node-fetch "^2.5.0"
+    simple-format-number "^0.1.2"
+
 lighthouse@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-5.0.0.tgz#bca0f2a3ca36877d44bef5ba6478b135820d1cfb"
@@ -912,6 +920,11 @@ mute-stream@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
   integrity sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=
+
+node-fetch@^2.5.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
+  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
 
 node-forge@^0.8.1:
   version "0.8.2"
@@ -1221,6 +1234,11 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
   integrity sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
+
+simple-format-number@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/simple-format-number/-/simple-format-number-0.1.2.tgz#5e2a2d017971cdea9e22461993c73106bd9ab67a"
+  integrity sha1-XiotAXlxzeqeIkYZk8cxBr2atno=
 
 speedline-core@1.4.2:
   version "1.4.2"
