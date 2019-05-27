@@ -59,3 +59,6 @@ typings/
 
 # next.js build output
 .next
+
+# MacOS – best OS in the world
+.DS_Store
