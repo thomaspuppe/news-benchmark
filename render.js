@@ -20,6 +20,10 @@ reduceLighthouseResult = wholeResult => {
     }
 }
 
+oneLeadingZero = value => {
+    return value < 10 ? '0' + value : value;
+}
+
 percentage = value => {
     return Math.round(value * 100) + '%'
 }
@@ -68,8 +72,8 @@ const TEMPLATE_INDEX = fs.readFileSync('./template_index.html', {encoding: 'utf-
 const FETCH_TIME = SITES[0].lighthouseResult.fetchTime
 const fetchtime = new Date(FETCH_TIME)
 const RESULTS_META = {
-    fetchtime_date: `${fetchtime.getDate()}.${fetchtime.getMonth()+1}.${fetchtime.getFullYear()}`,
-    fetchtime_time: `${fetchtime.getHours()}:${fetchtime.getMinutes()}`
+    fetchtime_date: `${oneLeadingZero(fetchtime.getDate())}.${oneLeadingZero(fetchtime.getMonth()+1)}.${fetchtime.getFullYear()}`,
+    fetchtime_time: `${oneLeadingZero(fetchtime.getHours())}:${oneLeadingZero(fetchtime.getMinutes())}`
 }
 
 const RENDER_OBJECT = {
