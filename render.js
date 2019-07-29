@@ -1,12 +1,22 @@
 console.time('📊')
 const fs = require('fs')
-const lighthouseReportGenerator = require('./node_modules/lighthouse/lighthouse-core/report/report-generator');
+const lighthouseReportGenerator = require('./node_modules/lighthouse/lighthouse-core/report/report-generator')
 
 const SITES = JSON.parse(fs.readFileSync('./sites.json'), 'utf8')
 
 generateHtmlReportFromLighthouseResult = (resultJSON, name) => {
-    const resultHtml = lighthouseReportGenerator.generateReportHtml(resultJSON);
+    const resultHtml = lighthouseReportGenerator.generateReportHtml(resultJSON)
     fs.writeFileSync(`./output/report_${name}.html`, resultHtml)
+}
+
+addScoresToHistoryFile = (scores, name) => {
+    let history = JSON.parse(fs.readFileSync('./results/history.json'), 'utf8')
+    const today = new Date().toISOString().slice(0, 10)
+    if ( !history[today] ) {
+        history[today] = {}
+    }
+    history[today][name] = scores
+    fs.writeFileSync('./results/history.json', JSON.stringify(history, null, 4))
 }
 
 reduceLighthouseResult = wholeResult => {
@@ -63,6 +73,7 @@ SITES.forEach( SITE => {
     SITE.result = reduceLighthouseResult(SITE.lighthouseResult)
 
     generateHtmlReportFromLighthouseResult(SITE.lighthouseResult, SITE.id)
+    addScoresToHistoryFile(SITE.result, SITE.id)
 })
 
 const LEADER = SITES[findLeader(SITES)]
