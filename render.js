@@ -62,6 +62,19 @@ getRankingPerScore = () => {
     }
 }
 
+getHistoryPerSite = () => {
+    const HISTORY = JSON.parse(fs.readFileSync('./results/history.json'), 'utf8')
+    let historyPerSite = {}
+
+    SITES.forEach( SITE => {
+        historyPerSite[SITE.id] = {}
+        for (const [DATE, SCORES] of Object.entries(HISTORY)) {
+            historyPerSite[SITE.id][DATE] = SCORES[SITE.id]
+        }
+    })
+    return historyPerSite
+}
+
 eval_template = (s, params) => {
   return Function(...Object.keys(params), "return " + s)
   (...Object.values(params))
@@ -91,7 +104,8 @@ const RENDER_OBJECT = {
     sites: SITES,
     leader: LEADER,
     meta: RESULTS_META,
-    rankingPerScore: getRankingPerScore()
+    rankingPerScore: getRankingPerScore(),
+    historyPerSite: getHistoryPerSite()
 }
 
 const htmlIndex = eval_template(TEMPLATE_INDEX, RENDER_OBJECT)
