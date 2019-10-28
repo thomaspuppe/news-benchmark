@@ -3237,26 +3237,26 @@
         "zeit": {
             "accessibilityScore": 0.95,
             "bestpracticesScore": 0.79,
-            "performanceScore": 0.09,
+            "performanceScore": 0.21,
             "fieldPerformanceScore": 0.54,
             "seoScore": 0.98,
-            "overallScore": 3.35
+            "overallScore": 3.47
         },
         "welt": {
             "accessibilityScore": 0.78,
-            "bestpracticesScore": 0.86,
-            "performanceScore": 0.47,
+            "bestpracticesScore": 0.93,
+            "performanceScore": 0.34,
             "fieldPerformanceScore": 0.53,
             "seoScore": 0.98,
-            "overallScore": 3.6200000000000006
+            "overallScore": 3.56
         },
         "spiegel": {
             "accessibilityScore": 0.34,
             "bestpracticesScore": 0.5,
-            "performanceScore": 0.19,
+            "performanceScore": 0.17,
             "fieldPerformanceScore": 0.53,
             "seoScore": 0.91,
-            "overallScore": 2.47
+            "overallScore": 2.45
         },
         "sueddeutsche": {
             "accessibilityScore": 0.69,
@@ -3269,66 +3269,66 @@
         "tonline": {
             "accessibilityScore": 0.51,
             "bestpracticesScore": 0.64,
-            "performanceScore": 0.14,
+            "performanceScore": 0.11,
             "fieldPerformanceScore": 0.39,
             "seoScore": 0.91,
-            "overallScore": 2.5900000000000003
+            "overallScore": 2.56
         },
         "bild": {
-            "accessibilityScore": 0.71,
-            "bestpracticesScore": 0.5,
-            "performanceScore": 0.17,
+            "accessibilityScore": 0.8,
+            "bestpracticesScore": 0.57,
+            "performanceScore": 0.18,
             "fieldPerformanceScore": 0.42,
             "seoScore": 0.91,
-            "overallScore": 2.71
+            "overallScore": 2.88
         },
         "focus": {
             "accessibilityScore": 0.48,
-            "bestpracticesScore": 0.71,
-            "performanceScore": 0.29,
-            "fieldPerformanceScore": null,
+            "bestpracticesScore": 0.64,
+            "performanceScore": 0.1,
+            "fieldPerformanceScore": 0.5,
             "seoScore": 0.9,
-            "overallScore": 2.38
+            "overallScore": 2.62
         },
         "merkur": {
             "accessibilityScore": 0.92,
             "bestpracticesScore": 0.64,
-            "performanceScore": 0.26,
+            "performanceScore": 0.25,
             "fieldPerformanceScore": 0.56,
             "seoScore": 0.99,
-            "overallScore": 3.37
+            "overallScore": 3.3600000000000003
         },
         "ntv": {
             "accessibilityScore": 0.85,
             "bestpracticesScore": 0.71,
-            "performanceScore": 0.18,
+            "performanceScore": 0.12,
             "fieldPerformanceScore": 0.27,
-            "seoScore": 0.91,
-            "overallScore": 2.92
+            "seoScore": 0.9,
+            "overallScore": 2.85
         },
         "stern": {
             "accessibilityScore": 0.72,
             "bestpracticesScore": 0.64,
-            "performanceScore": 0.2,
-            "fieldPerformanceScore": null,
+            "performanceScore": 0.23,
+            "fieldPerformanceScore": 0.28,
             "seoScore": 0.76,
-            "overallScore": 2.32
+            "overallScore": 2.63
         },
         "faz": {
             "accessibilityScore": 0.62,
             "bestpracticesScore": 0.64,
-            "performanceScore": 0.11,
+            "performanceScore": 0.12,
             "fieldPerformanceScore": 0.34,
             "seoScore": 0.9,
-            "overallScore": 2.6100000000000003
+            "overallScore": 2.62
         },
         "heise": {
             "accessibilityScore": 0.67,
             "bestpracticesScore": 0.64,
-            "performanceScore": 0.27,
+            "performanceScore": 0.24,
             "fieldPerformanceScore": 0.61,
             "seoScore": 0.9,
-            "overallScore": 3.09
+            "overallScore": 3.06
         }
     }
 }
