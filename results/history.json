@@ -3722,5 +3722,103 @@
             "seoScore": 0.9,
             "overallScore": 3.02
         }
+    },
+    "2019-11-04": {
+        "zeit": {
+            "accessibilityScore": 0.96,
+            "bestpracticesScore": 0.93,
+            "performanceScore": 0.23,
+            "fieldPerformanceScore": 0.73,
+            "seoScore": 0.98,
+            "overallScore": 3.83
+        },
+        "welt": {
+            "accessibilityScore": 0.71,
+            "bestpracticesScore": 0.86,
+            "performanceScore": 0.38,
+            "fieldPerformanceScore": 0.66,
+            "seoScore": 0.9,
+            "overallScore": 3.51
+        },
+        "spiegel": {
+            "accessibilityScore": 0.34,
+            "bestpracticesScore": 0.5,
+            "performanceScore": 0.11,
+            "fieldPerformanceScore": 0.7,
+            "seoScore": 0.91,
+            "overallScore": 2.56
+        },
+        "sueddeutsche": {
+            "accessibilityScore": 0.69,
+            "bestpracticesScore": 0.86,
+            "performanceScore": 0.35,
+            "fieldPerformanceScore": 0.71,
+            "seoScore": 0.92,
+            "overallScore": 3.53
+        },
+        "tonline": {
+            "accessibilityScore": 0.47,
+            "bestpracticesScore": 0.64,
+            "performanceScore": 0.17,
+            "fieldPerformanceScore": 0.57,
+            "seoScore": 0.91,
+            "overallScore": 2.76
+        },
+        "bild": {
+            "accessibilityScore": 0.82,
+            "bestpracticesScore": 0.5,
+            "performanceScore": 0.09,
+            "fieldPerformanceScore": 0.55,
+            "seoScore": 0.91,
+            "overallScore": 2.87
+        },
+        "focus": {
+            "accessibilityScore": 0.52,
+            "bestpracticesScore": 0.57,
+            "performanceScore": 0.15,
+            "fieldPerformanceScore": 0.67,
+            "seoScore": 0.9,
+            "overallScore": 2.8099999999999996
+        },
+        "merkur": {
+            "accessibilityScore": 0.77,
+            "bestpracticesScore": 0.71,
+            "performanceScore": 0.26,
+            "fieldPerformanceScore": 0.67,
+            "seoScore": 0.91,
+            "overallScore": 3.3200000000000003
+        },
+        "ntv": {
+            "accessibilityScore": 0.85,
+            "bestpracticesScore": 0.71,
+            "performanceScore": 0.11,
+            "fieldPerformanceScore": 0.42,
+            "seoScore": 0.91,
+            "overallScore": 3.0000000000000004
+        },
+        "stern": {
+            "accessibilityScore": 0.74,
+            "bestpracticesScore": 0.71,
+            "performanceScore": 0.22,
+            "fieldPerformanceScore": 0.4,
+            "seoScore": 0.76,
+            "overallScore": 2.83
+        },
+        "faz": {
+            "accessibilityScore": 0.62,
+            "bestpracticesScore": 0.64,
+            "performanceScore": 0.13,
+            "fieldPerformanceScore": 0.53,
+            "seoScore": 0.9,
+            "overallScore": 2.8200000000000003
+        },
+        "heise": {
+            "accessibilityScore": 0.67,
+            "bestpracticesScore": 0.71,
+            "performanceScore": 0.34,
+            "fieldPerformanceScore": 0.72,
+            "seoScore": 0.9,
+            "overallScore": 3.34
+        }
     }
 }
