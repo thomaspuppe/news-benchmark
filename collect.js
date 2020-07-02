@@ -42,7 +42,7 @@ async function launchChromeAndRunLighthouse(siteConfig, opts, config = null) {
 }
 
 const opts = {
-  // chromeFlags: ['--headless'],
+  chromeFlags: ['--headless'],
   plugins: ['lighthouse-plugin-field-performance']
 };
 
