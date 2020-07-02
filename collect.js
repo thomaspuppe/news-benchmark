@@ -28,14 +28,17 @@ async function launchChromeAndRunLighthouse(siteConfig, opts, config = null) {
   const chrome = await chromeLauncher.launch({chromeFlags: opts.chromeFlags})
   opts.port = chrome.port;
 
+  // connect puppeteer to chrome (see https://github.com/GoogleChrome/lighthouse/blob/master/docs/puppeteer.md)
   const chromeStatsResponse = await request(`http://localhost:${opts.port}/json/version`);
   const { webSocketDebuggerUrl } = JSON.parse(chromeStatsResponse);
   const browser = await puppeteer.connect({ browserWSEndpoint: webSocketDebuggerUrl });
   
+  // handle sites with prerolled consent pages
   if (siteConfig.requires_consent) {
     await giveConsent(browser, siteConfig);
   }
 
+  // run lighthouse
   const { lhr } = await lighthouse(siteConfig.url, opts, config);
   await chrome.kill();
   return lhr;
