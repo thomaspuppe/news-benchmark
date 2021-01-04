@@ -3,8 +3,7 @@
 		"id": "zeit",
 		"url": "https://www.zeit.de/index",
 		"label": "ZEIT",
-		"label_pretty": "ZEIT Online",
-		"requires_consent": true
+		"label_pretty": "ZEIT Online"
 	},
 	{
 		"id": "welt",
@@ -16,8 +15,7 @@
 		"id": "spiegel",
 		"url": "https://www.spiegel.de",
 		"label": "SPIEGEL",
-		"label_pretty": "Der SPIEGEL",
-		"requires_consent": true
+		"label_pretty": "Der SPIEGEL"
 	},
 	{
 		"id": "sueddeutsche",

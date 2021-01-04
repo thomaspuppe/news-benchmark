@@ -1,7 +1,10 @@
 {
   "name": "news-benchmark",
-  "version": "0.2.0",
+  "version": "0.5.0",
   "author": "Thomas Puppe <info@thomaspuppe.de>",
+  "contributors": [
+    "Martin Schön <martingeorg.schoen@gmail.com> (http://argonn.me/)"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -14,10 +17,6 @@
   },
   "dependencies": {
     "lighthouse": "^7.0.0",
-    "lighthouse-plugin-field-performance": "^1.1.1",
-    "puppeteer": "^4.0.1",
-    "puppeteer-give-consent": "^0.1.0",
-    "request": "^2.88.2",
-    "request-promise-native": "^1.0.8"
+    "lighthouse-plugin-field-performance": "^2.2.1"
   }
 }

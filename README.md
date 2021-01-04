@@ -4,12 +4,14 @@ https://thomaspuppe.github.io/news-benchmark/
 
 ## Usage
 
-* `yarn run collect` to collect lighthouse data
-* `yarn run render` to render results into HTML file
-* `yarn run deploy` to copy the HTML file into gh_pages branch and push to GitHub
+* `npm run collect` to collect lighthouse data
+* `npm run render` to render results into HTML file
+* `npm run deploy` to copy the HTML file into gh_pages branch and push to GitHub
 
 
 ## Next Steps
+
+* Run via GitHub Actions (like Speedlify)
 
 * make rponline, FAZ and heise work
 
