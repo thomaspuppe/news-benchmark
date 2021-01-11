@@ -16,6 +16,7 @@
     "deploy": "git subtree push --prefix output origin gh-pages"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "lighthouse": "^7.0.0",
     "lighthouse-plugin-field-performance": "^2.2.1"
   }

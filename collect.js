@@ -1,6 +1,8 @@
+require('dotenv').config();
 const fs = require('fs')
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
+
 
 const SITES = JSON.parse(fs.readFileSync('./sites.json'), 'utf8');
 
@@ -14,9 +16,14 @@ async function launchChromeAndRunLighthouse(siteConfig, opts) {
 
 const opts = {
   emulatedUserAgent: 'Chrome-Lighthouse',
-  output: 'html',
-  plugins: ['lighthouse-plugin-field-performance']
+  output: 'html'
 };
+
+if(process?.env?.PAGE_SPEED_INSIGHTS_API_KEY) {
+    opts['plugins'] = [ 'lighthouse-plugin-field-performance' ];
+    opts['settings'] = { psiToken: process.env.PAGE_SPEED_INSIGHTS_API_KEY };
+    console.log('Run Lighthouse with Page Speed Insights')
+}
 
 collectLighthouseResults = index => {
     const SITE = SITES[index]
