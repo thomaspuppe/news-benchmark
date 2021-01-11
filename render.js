@@ -4,10 +4,10 @@ const lighthouseReportGenerator = require('./node_modules/lighthouse/lighthouse-
 
 const SITES = JSON.parse(fs.readFileSync('./sites.json'), 'utf8')
 
-generateHtmlReportFromLighthouseResult = (resultJSON, name) => {
+/*generateHtmlReportFromLighthouseResult = (resultJSON, name) => {
     const resultHtml = lighthouseReportGenerator.generateReportHtml(resultJSON)
     fs.writeFileSync(`./output/report_${name}.html`, resultHtml)
-}
+}*/
 
 addScoresToHistoryFile = (scores, name) => {
     let history = JSON.parse(fs.readFileSync('./results/history.json'), 'utf8')
@@ -84,8 +84,7 @@ SITES.forEach( SITE => {
     // OPTIMIZE: async all the fs read and write operations
     SITE.lighthouseResult = JSON.parse(fs.readFileSync(`./results/${SITE.id}_latest.json`), 'utf8');
     SITE.result = reduceLighthouseResult(SITE.lighthouseResult)
-
-    generateHtmlReportFromLighthouseResult(SITE.lighthouseResult, SITE.id)
+    // generateHtmlReportFromLighthouseResult(SITE.lighthouseResult, SITE.id)
     addScoresToHistoryFile(SITE.result, SITE.id)
 })
 

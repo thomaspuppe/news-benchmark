@@ -22,7 +22,7 @@ collectLighthouseResults = index => {
     const SITE = SITES[index]
     console.log(SITE.url)
     launchChromeAndRunLighthouse(SITE, opts).then(results => {
-        // fs.writeFileSync(`./results/${SITE.id}_latest.html`, results.report)
+        fs.writeFileSync(`./output/report_${SITE.id}.html`, results.report)
         fs.writeFileSync(`./results/${SITE.id}_latest.json`, JSON.stringify(results.lhr, null, 4))
     }).catch( error => {
         console.error(error)
