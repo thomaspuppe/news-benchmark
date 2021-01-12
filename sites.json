@@ -30,12 +30,6 @@
 		"label_pretty": "T-Online"
 	},
 	{
-		"id": "bild",
-		"url": "https://www.bild.de/",
-		"label": "BILD",
-		"label_pretty": "BILD"
-	},
-	{
 		"id": "focus",
 		"url": "https://www.focus.de/",
 		"label": "Focus",

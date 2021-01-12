@@ -11,6 +11,8 @@ https://thomaspuppe.github.io/news-benchmark/
 
 ## Next Steps
 
+* Warum hängt die BILD??
+
 * Run via GitHub Actions (like Speedlify)
 
 * make rponline, FAZ and heise work
@@ -34,7 +36,13 @@ https://thomaspuppe.github.io/news-benchmark/
 		"url": "https://www.faz.net/aktuell/",
 		"label": "FAZ",
 		"label_pretty": "FAZ"
-	}
+	},
+	{
+		"id": "bild",
+		"url": "https://www.bild.de/",
+		"label": "BILD",
+		"label_pretty": "BILD"
+	},
 ```
 
 * small ranking boards for each category (a11y, best-practice, perf, seo), or a sortable table
