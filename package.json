@@ -14,7 +14,7 @@
     "collect": "node collect.js",
     "render": "node render.js",
     "deploy": "git subtree push --prefix output origin gh-pages",
-    "all": "npm run collect; npm run render; gc -am 'update'; git push; npm run deploy"
+    "all": "npm run collect; npm run render; gc -am 'update'; npm run deploy; git push"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
