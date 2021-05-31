@@ -17,7 +17,7 @@
     "all": "npm run collect; npm run render; git commit -am \"update\"; git push; npm run deploy"
   },
   "dependencies": {
-    "dotenv": "^9.0.2",
+    "dotenv": "^10.0.0",
     "lighthouse": "^7.5.0",
     "lighthouse-plugin-field-performance": "^2.2.1"
   }
