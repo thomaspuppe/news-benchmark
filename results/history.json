@@ -18353,5 +18353,77 @@
             "seoScore": 0.92,
             "overallScore": null
         }
+    },
+    "2021-07-26": {
+        "zeit": {
+            "accessibilityScore": 0.91,
+            "bestpracticesScore": 0.87,
+            "performanceScore": 0.44,
+            "seoScore": 0.98,
+            "overallScore": null
+        },
+        "welt": {
+            "accessibilityScore": 0.77,
+            "bestpracticesScore": 0.87,
+            "performanceScore": 0.46,
+            "seoScore": 1,
+            "overallScore": null
+        },
+        "spiegel": {
+            "accessibilityScore": 0.59,
+            "bestpracticesScore": 0.8,
+            "performanceScore": 0.22,
+            "seoScore": 0.78,
+            "overallScore": null
+        },
+        "sueddeutsche": {
+            "accessibilityScore": 0.67,
+            "bestpracticesScore": 0.67,
+            "performanceScore": 0.37,
+            "seoScore": 0.86,
+            "overallScore": null
+        },
+        "tonline": {
+            "accessibilityScore": 0.61,
+            "bestpracticesScore": 0.67,
+            "performanceScore": 0.4,
+            "seoScore": 0.71,
+            "overallScore": null
+        },
+        "focus": {
+            "accessibilityScore": 0.54,
+            "bestpracticesScore": 0.53,
+            "performanceScore": 0.47,
+            "seoScore": 0.64,
+            "overallScore": null
+        },
+        "merkur": {
+            "accessibilityScore": 0.84,
+            "bestpracticesScore": 0.8,
+            "performanceScore": 0.52,
+            "seoScore": 0.91,
+            "overallScore": null
+        },
+        "ntv": {
+            "accessibilityScore": 0.88,
+            "bestpracticesScore": 0.8,
+            "performanceScore": 0.48,
+            "seoScore": 0.93,
+            "overallScore": null
+        },
+        "faz": {
+            "accessibilityScore": 0.81,
+            "bestpracticesScore": 0.6,
+            "performanceScore": 0.14,
+            "seoScore": 0.86,
+            "overallScore": null
+        },
+        "heise": {
+            "accessibilityScore": 0.74,
+            "bestpracticesScore": 0.87,
+            "performanceScore": 0.31,
+            "seoScore": 0.92,
+            "overallScore": null
+        }
     }
 }
