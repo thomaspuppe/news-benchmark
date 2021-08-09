@@ -19006,14 +19006,14 @@
         "zeit": {
             "accessibilityScore": 0.91,
             "bestpracticesScore": 0.87,
-            "performanceScore": 0.35,
+            "performanceScore": 0.4,
             "seoScore": 0.99,
             "overallScore": null
         },
         "welt": {
             "accessibilityScore": 0.75,
             "bestpracticesScore": 0.87,
-            "performanceScore": 0.35,
+            "performanceScore": 0.43,
             "seoScore": 1,
             "overallScore": null
         },
@@ -19027,35 +19027,35 @@
         "sueddeutsche": {
             "accessibilityScore": 0.67,
             "bestpracticesScore": 0.67,
-            "performanceScore": 0.49,
+            "performanceScore": 0.45,
             "seoScore": 0.86,
             "overallScore": null
         },
         "tonline": {
             "accessibilityScore": 0.65,
             "bestpracticesScore": 0.67,
-            "performanceScore": 0.46,
+            "performanceScore": 0.38,
             "seoScore": 0.71,
             "overallScore": null
         },
         "focus": {
             "accessibilityScore": 0.52,
             "bestpracticesScore": 0.53,
-            "performanceScore": 0.53,
+            "performanceScore": 0.49,
             "seoScore": 0.64,
             "overallScore": null
         },
         "merkur": {
             "accessibilityScore": 0.84,
             "bestpracticesScore": 0.8,
-            "performanceScore": 0.57,
+            "performanceScore": 0.59,
             "seoScore": 0.91,
             "overallScore": null
         },
         "ntv": {
             "accessibilityScore": 0.88,
-            "bestpracticesScore": 0.73,
-            "performanceScore": 0.52,
+            "bestpracticesScore": 0.8,
+            "performanceScore": 0.45,
             "seoScore": 0.93,
             "overallScore": null
         },
@@ -19069,7 +19069,7 @@
         "heise": {
             "accessibilityScore": 0.74,
             "bestpracticesScore": 0.8,
-            "performanceScore": 0.38,
+            "performanceScore": 0.42,
             "seoScore": 0.92,
             "overallScore": null
         }
