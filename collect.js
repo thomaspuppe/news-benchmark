@@ -8,8 +8,7 @@ const SITES = JSON.parse(fs.readFileSync('./sites.json'), 'utf8');
 
 async function launchChromeAndRunLighthouse(siteConfig, opts) {
   const chrome = await chromeLauncher.launch({
-    chromeFlags: ['--headless'],
-    extraHeaders: "{\"Cookie\":\"iom_consent=123\", \"_sp_v1_consent\":\"1!0:-1:-1:-1:-1:-1\", \"consentUUID\":\"123\"}"
+    chromeFlags: ['--headless']
   })
   opts.port = chrome.port;
   const runnerResult = await lighthouse(siteConfig.url, opts);
