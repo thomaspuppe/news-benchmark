@@ -26,7 +26,7 @@
                 <li>accessibilityScore: ${ percentage(leader.result.accessibilityScore) }</li>
                 <li>bestpracticesScore: ${ percentage(leader.result.bestpracticesScore) }</li>
                 <li>performanceScore: ${ percentage(leader.result.performanceScore) }</li>
-                <li>fieldPerformanceScore: ${ percentage(leader.result.fieldPerformanceScore) }</li>
+                <li>fieldPerformanceScore: ${ leader.result.fieldPerformanceScore > 0 ? percentage(leader.result.fieldPerformanceScore) : '–' }</li>
                 <li>seoScore: ${ percentage(leader.result.seoScore) }</li>
             </ul>
         </div>
@@ -126,9 +126,9 @@
                             <td>${ percentage(site.result.accessibilityScore) }</td>
                             <td>${ percentage(site.result.bestpracticesScore) }</td>
                             <td>${ percentage(site.result.performanceScore) }</td>
-                            <td>${ percentage(site.result.fieldPerformanceScore) }</td>
+                            <td>${ site.result.fieldPerformanceScore > 0 ? percentage(site.result.fieldPerformanceScore) : '–' }</td>
                             <td>${ percentage(site.result.seoScore) }</td>
-                            <td>${ ((site.result.overallScore / 5) * 100).toFixed(1) }% <a href="report_${site.id}.html"><small>Details</small></a></td>
+                            <td>${ site.result.fieldPerformanceScore > 0 ? ((site.result.overallScore / 5) * 100).toFixed(1) : ((site.result.overallScore / 4) * 100).toFixed(1) }% <a href="report_${site.id}.html"><small>Details</small></a></td>
                         </tr>`
                     ).join('\n')}
                 </tbody>
