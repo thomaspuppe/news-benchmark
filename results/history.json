@@ -19286,10 +19286,10 @@
         "faz": {
             "accessibilityScore": 0.81,
             "bestpracticesScore": 0.6,
-            "performanceScore": 0.09,
+            "performanceScore": 0.08,
             "fieldPerformanceScore": 0,
             "seoScore": 0.86,
-            "overallScore": 2.3600000000000003
+            "overallScore": 2.35
         },
         "heise": {
             "accessibilityScore": 0.74,

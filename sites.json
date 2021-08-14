@@ -1,62 +1,9 @@
 [
-	{
-		"id": "zeit",
-		"url": "https://www.zeit.de/index",
-		"label": "ZEIT",
-		"label_pretty": "ZEIT Online"
-	},
-	{
-		"id": "welt",
-		"url": "https://www.welt.de",
-		"label": "WELT",
-		"label_pretty": "Die WELT"
-	},
-	{
-		"id": "spiegel",
-		"url": "https://www.spiegel.de",
-		"label": "SPIEGEL",
-		"label_pretty": "Der SPIEGEL"
-	},
-	{
-		"id": "sueddeutsche",
-		"url": "https://www.sueddeutsche.de",
-		"label": "Süddeutsche",
-		"label_pretty": "Süddeutsche Zeitung"
-	},
-	{
-		"id": "tonline",
-		"url": "https://www.t-online.de/",
-		"label": "T-Online",
-		"label_pretty": "T-Online"
-	},
-	{
-		"id": "focus",
-		"url": "https://www.focus.de/",
-		"label": "Focus",
-		"label_pretty": "Focus"
-	},
-	{
-		"id": "merkur",
-		"url": "https://www.merkur.de/",
-		"label": "Merkur",
-		"label_pretty": "Merkur"
-	},
-	{
-		"id": "ntv",
-		"url": "https://www.n-tv.de/",
-		"label": "ntv",
-		"label_pretty": "ntv"
-	},
+
 	{
 		"id": "faz",
 		"url": "https://www.faz.net/aktuell/",
 		"label": "FAZ",
 		"label_pretty": "FAZ"
-	},
-	{
-		"id": "heise",
-		"url": "https://www.heise.de/",
-		"label": "heise",
-		"label_pretty": "heise"
 	}
 ]
