@@ -19873,5 +19873,87 @@
             "seoScore": 0.85,
             "overallScore": 3.67
         }
+    },
+    "2021-09-13": {
+        "zeit": {
+            "accessibilityScore": 0.93,
+            "bestpracticesScore": 0.87,
+            "performanceScore": 0.39,
+            "fieldPerformanceScore": 0.98,
+            "seoScore": 0.99,
+            "overallScore": 4.16
+        },
+        "welt": {
+            "accessibilityScore": 0.75,
+            "bestpracticesScore": 0.87,
+            "performanceScore": 0.38,
+            "fieldPerformanceScore": 0.94,
+            "seoScore": 1,
+            "overallScore": 3.94
+        },
+        "spiegel": {
+            "accessibilityScore": 0.59,
+            "bestpracticesScore": 0.8,
+            "performanceScore": 0.22,
+            "fieldPerformanceScore": 0,
+            "seoScore": 0.78,
+            "overallScore": 2.39
+        },
+        "sueddeutsche": {
+            "accessibilityScore": 0.69,
+            "bestpracticesScore": 0.73,
+            "performanceScore": 0.36,
+            "fieldPerformanceScore": 0.76,
+            "seoScore": 0.86,
+            "overallScore": 3.4
+        },
+        "tonline": {
+            "accessibilityScore": 0.65,
+            "bestpracticesScore": 0.67,
+            "performanceScore": 0.55,
+            "fieldPerformanceScore": 0,
+            "seoScore": 0.71,
+            "overallScore": 2.58
+        },
+        "focus": {
+            "accessibilityScore": 0.54,
+            "bestpracticesScore": 0.53,
+            "performanceScore": 0.52,
+            "fieldPerformanceScore": 0,
+            "seoScore": 0.64,
+            "overallScore": 2.23
+        },
+        "merkur": {
+            "accessibilityScore": 0.84,
+            "bestpracticesScore": 0.8,
+            "performanceScore": 0.59,
+            "fieldPerformanceScore": 0,
+            "seoScore": 0.91,
+            "overallScore": 3.14
+        },
+        "ntv": {
+            "accessibilityScore": 0.88,
+            "bestpracticesScore": 0.73,
+            "performanceScore": 0.56,
+            "fieldPerformanceScore": 0.98,
+            "seoScore": 0.93,
+            "overallScore": 4.08
+        },
+        "faz": {
+            "accessibilityScore": 0.81,
+            "bestpracticesScore": 0.6,
+            "performanceScore": 0.17,
+            "fieldPerformanceScore": 0,
+            "seoScore": 0.86,
+            "overallScore": 2.44
+        },
+        "heise": {
+            "accessibilityScore": 0.74,
+            "bestpracticesScore": 0.87,
+            "performanceScore": 0.39,
+            "fieldPerformanceScore": 0.88,
+            "seoScore": 0.92,
+            "overallScore": 3.8
+        }
     }
 }
