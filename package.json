@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "dotenv": "^10.0.0",
-    "lighthouse": "^8.3.0",
-    "lighthouse-plugin-field-performance": "^2.2.1"
+    "lighthouse": "^9.1.0",
+    "lighthouse-plugin-field-performance": "^3.0.0"
   }
 }
